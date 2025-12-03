@@ -1,0 +1,19 @@
+{
+  "ipComment": "MyDevMachine",
+  "mongo": [
+    {
+      "name": "Example Project",
+      "profile": "example-profile",
+      "projectId": "your-project-id-here"
+    }
+  ],
+  "aws": [
+    {
+      "name": "Example Server",
+      "profile": "example-aws-profile",
+      "region": "eu-central-1",
+      "securityGroupName": "my-server-sg"
+    }
+  ]
+}
+

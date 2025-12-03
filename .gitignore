@@ -1,0 +1,9 @@
+# Config with sensitive data
+config.json
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
