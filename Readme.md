@@ -1,6 +1,6 @@
 ## Whitelist your current IP in related Mongo / AWS projects
 
-### Helpful tool for heavy VPN users whose IP chanes very frequently
+### Helpful tool for heavy VPN users whose IP changes very frequently
 
 Requirements:
 - MongoDB
@@ -23,7 +23,7 @@ npm run add-mongo
 aws configure --profile whitelist-me
 ```
 
-Then go to ./scripts/config.json and verify `ipComment` is the description field that you want your IP entries to have
+Then go to `./scripts/config.json` and verify value of `ipComment` to be the `description` field that you want your IP entries to have
 Also veriry `securityGroupId` of AWS related config
 
 Then execute, it will read the config and use connected account to whitelist current IP
