@@ -4,13 +4,13 @@
 
 Requirements:
 - MongoDB
--- Just user account with permission to modify `IP Access List`
+  - Just user account with permission to modify `IP Access List`
 - AWS
--- you will need two secrets listed below:
--- aws access key id
--- aws secret access key
--- and also Id of security group that this will update
--- (probably permission to update this security group)
+  - you will need two secrets listed below:
+  - aws access key id
+  - aws secret access key
+  - and also Id of security group that this will update
+  - (probably permission to update this security group)
 
 ```sh
 cd ./scripts
@@ -37,3 +37,8 @@ Or
 ```
 ./whitelist.sh
 ```
+
+
+----
+
+p.s. whole thing was vibecoded, but it works xD
