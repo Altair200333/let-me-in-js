@@ -1,5 +1,4 @@
 @echo off
 cd /d "%~dp0\scripts"
-npm run whitelist
+call npm run whitelist
 pause
-
