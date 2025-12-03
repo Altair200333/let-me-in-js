@@ -1,16 +1,26 @@
-## Whitelist your current IP in related Mongo / AWS projects
+# 🔓 Let Me In
 
-### Helpful tool for heavy VPN users whose IP changes very frequently
+One-click IP whitelist for MongoDB & AWS security groups.  
 
-Requirements:
-- MongoDB
-  - Just user account with permission to modify `IP Access List`
-- AWS
-  - you will need two secrets listed below:
-  - aws access key id
-  - aws secret access key
-  - and also Id of security group that this will update
-  - (probably permission to update this security group)
+---
+
+TLDR; Create & Update just single dedicated entry in your IP access list in the project
+
+---
+
+## Requirements
+
+**MongoDB**
+- User account with permission to modify `IP Access List`
+
+**AWS**
+- Access Key ID & Secret Access Key
+- Security Group ID you want to update
+- Permission to modify that security group
+
+---
+
+## Setup
 
 ```sh
 cd ./scripts
@@ -23,10 +33,20 @@ npm run add-mongo
 aws configure --profile whitelist-me
 ```
 
-Then go to `./scripts/config.json` and verify value of `ipComment` to be the `description` field that you want your IP entries to have
+In case of AWS make sure to use the same name everywhere, i.e. whitelist-me
+
+## One time check
+
+Go to `./scripts/config.json` and verify value of `ipComment` to be the `description` field that you want your IP entries to have.
+
 Also veriry `securityGroupId` of AWS related config
 
-Then execute, it will read the config and use connected account to whitelist current IP
+
+
+## Daily Usage
+
+
+Execute this, it will read the config and use connected account to whitelist current IP.
 
 ```sh
 ./whitelist.bat
